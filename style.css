@@ -574,13 +574,13 @@
 
    @media (max-width: 750px) {
        .image-strip {
-           display: grid;
-           grid-template-columns: 1fr;
+           display: flex;
+
            width: 500px;
-           overflow-y: auto;
-           overflow-x: hidden;
-           margin: 4% 20%;
-           width: 65%;
+           overflow-x: auto;
+           overflow-Y: hidden;
+           margin: 4% 6%;
+           width: 91%;
 
        }
    }
