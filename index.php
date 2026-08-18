@@ -1,4 +1,25 @@
-<!DOCTYPE html>
+<?php
+
+$con=mysqli_connect("localhost","root","","bookings_1")or die("Error");
+
+    if(isset($_POST['book'])){
+    $checkin = $_POST['checkin'];
+    $checkout = $_POST['checkout'];
+    $guests = $_POST['guests'];
+    $room = $_POST['room'];
+    
+
+
+    $qry="INSERT INTO `villas-2` (`checkin`, `checkout`, `guests`, `room`) VALUES ('$checkin', '$checkout', '$guests', '$room');";
+    $sql=mysqli_query($con,$qry);
+    if($sql){
+             header("Location: index.php?success=1");
+        exit();
+    } else {
+        echo "Booking Failed";
+    }
+    }
+?>
 <html lang="en">
 
 <head>
@@ -41,38 +62,38 @@
             <p> A stunning 3-bedroom retreat in the heart of Assagao with an expansive private pool
                 and beautiful interiors, blending ultimate luxury and comfort. </p>
 
-            <form class="booking1">
+            <form class="booking1" method="POST">
                 <div class="booking-btn">
                     <label> Check In</label>
-                    <input type="date" id="checkin">
+                    <input type="date" name="checkin" id="checkin">
                 </div>
 
                 <div class="booking-btn">
                     <label> Check Out</label>
-                    <input type="date" id="checkout">
+                    <input type="date" name="checkout" id="checkout">
                 </div>
                 <div class="booking-btn">
 
                     <label>Guests</label>
-                    <select id="guests">
-                        <option>2 Guests</option>
-                        <option>3 Guests</option>
-                        <option>4 Guests</option>
-                        <option>5 Guests</option>
+                    <select  name="guests" id="guests">
+                          <option value="2">2 Guests</option>
+                           <option value="3">3 Guests</option>
+                           <option value="4">4 Guests</option>
+                           <option value="5">5 Guests</option>
 
                     </select>
                 </div>
 
                 <div class="booking-btn">
                     <label>Room</label>
-                    <select id="rooms">
+                    <select  name="room" id="rooms">
                         <option>Garden Room</option>
                         <option>Pool Suite</option>
                         <option>Private Villa</option>
                     </select>
 
                 </div>
-                <button type="submit" class="booking-submit">
+                <button type="submit" name="book" class="booking-submit">
                     Check Availability
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -336,7 +357,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
