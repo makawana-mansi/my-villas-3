@@ -12,13 +12,13 @@
     <nav>
         <!-- ==========Navbar=========== -->
         <div class="logo">
-            Romini Luxe
+            <img src="image/logo.png" alt="">
         </div>
         <ul>
 
             <li><a href="#home">Home</a></li>
             <li><a href="#story">About Villa</a></li>
-            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#room">Rooms</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#goa">Goa</a></li>
@@ -37,31 +37,60 @@
             <div class="small">
                 WELCOME TO OUR VILLA
             </div>
-            <h1>Romini Luxe Villa</h1>
+            <h1>Romini Luxe <span>Villa</span></h1>
             <p> A stunning 3-bedroom retreat in the heart of Assagao with an expansive private pool
                 and beautiful interiors, blending ultimate luxury and comfort. </p>
 
-            <a href="#story" class="discover">
-                Explore Villa
-            </a>
-        </div>
-        <div class="right">
-            <div class="hero-image">
+            <form class="booking1">
+                <div class="booking-btn">
+                    <label> Check In</label>
+                    <input type="date" id="checkin">
+                </div>
 
-                <img src="image/img1.jpg" alt="Villa">
+                <div class="booking-btn">
+                    <label> Check Out</label>
+                    <input type="date" id="checkout">
+                </div>
+                <div class="booking-btn">
 
-            </div>
+                    <label>Guests</label>
+                    <select id="guests">
+                        <option>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4 Guests</option>
+                        <option>5 Guests</option>
+
+                    </select>
+                </div>
+
+                <div class="booking-btn">
+                    <label>Room</label>
+                    <select id="rooms">
+                        <option>Garden Room</option>
+                        <option>Pool Suite</option>
+                        <option>Private Villa</option>
+                    </select>
+
+                </div>
+                <button type="submit" class="booking-submit">
+                    Check Availability
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+
         </div>
     </section>
-
-    <section id="story" class="story hero">
-        <div class="left-btn left">
+    <!--  =========================== story ======================== -->
+    <section id="story" class="story">
+        <!-- <div class="left-btn left">
             <div class=" btn">
                 <img src="image/img2.jpg" alt="Villa">
-            </div>
+            </div> -->
 
-        </div>
-        <div class="right-btn right">
+        <!-- </div> -->
+
+        <div class="story-text">
+
             <div class="small">
                 THE VILLA
             </div>
@@ -78,7 +107,14 @@
                 More About the Villa →
             </a>
         </div>
+        <div class="story-image">
+            <img src="image/img2.jpg" alt="Villa">
+        </div>
+
+
     </section>
+
+    <!--================== img=================== -->
 
     <section class="image-strip">
 
@@ -90,7 +126,7 @@
 
     </section>
 
-
+    <!--================== expe... =================== -->
     <section id="experience" class="experience">
         <div class="small" style="margin-top: 5%;">
             THE EXPERIENCE
@@ -118,7 +154,9 @@
 
             </div>
 
+
             <div class="first">
+
                 <p class="number">04</p>
                 <h3>Perfect Stay</h3>
                 <p>A great place to relax with your family and friends.</p>
@@ -127,63 +165,64 @@
     </section>
 
     <!-- ========= Room1 ============-->
-    <section class="rooms" id="rooms">
+    <section id="room" class="rooms">
 
         <div class="small">
             Your Stay
         </div>
         <h1>Rooms & Spaces</h1>
+        <div class="room-grid-container">
+            <div class="con">
+                <div class="left1">
+                    <img src="image/img6.jpg" alt="">
 
-        <div class="con">
-            <div class="left1">
-                <img src="image/img6.jpg" alt="">
-
+                </div>
+                <div class="right1">
+                    <p class="number_1">01</p>
+                    <h3>The Garden Room</h3>
+                    <p>A beautiful bedroom with warm white colors, opening directly to the poolside lounge.</p>
+                    <div class="price">₹12,500 / Night</div>
+                    <a href="#booking" class="room-btn">
+                        Explore Room
+                    </a>
+                </div>
             </div>
-            <div class="right1">
-                <p class="number">01</p>
-                <h3>The Garden Room</h3>
-                <p>A beautiful bedroom with warm white colors, opening directly to the poolside lounge.</p>
-                <div class="price">₹12,500 / Night</div>
-                <a href="#booking" class="room-btn">
-                    Explore Room
-                </a>
+
+            <!-- ========= Room2 ============-->
+            <div class="con">
+                <div class="left1">
+                    <img src="image/img3.jpg" alt="">
+
+                </div>
+                <div class="right1">
+                    <p class="number_1">02</p>
+                    <h3>Private Pool & Garden</h3>
+                    <p>Enjoy an expansive 22 ft x 12 ft private pool surrounded by a lush green garden and a cozy patio
+                        lounge area.</p>
+                    <div class="price">₹16,500 / Night</div>
+                    <a href="#booking" class="room-btn">
+                        Explore Room
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <!-- ========= Room2 ============-->
-        <div class="con">
-            <div class="left1">
-                <img src="image/img3.jpg" alt="">
+            <!-- ========= Room3 ============-->
+            <div class="con">
+                <div class="left1">
+                    <img src="image/img7.jpg" alt="">
 
-            </div>
-            <div class="right1">
-                <p class="number">02</p>
-                <h3>Private Pool & Garden</h3>
-                <p>Enjoy an expansive 22 ft x 12 ft private pool surrounded by a lush green garden and a cozy patio
-                    lounge area.</p>
-                <div class="price">₹16,500 / Night</div>
-                <a href="#booking" class="room-btn">
-                    Explore Room
-                </a>
-            </div>
-        </div>
+                </div>
+                <div class="right1">
+                    <p class="number_1">03</p>
+                    <h3>Romini Luxe Villa</h3>
+                    <p>A spacious 3-bedroom villa with a private pool, beautiful garden, and comfortable spaces for
+                        families.</p>
 
-        <!-- ========= Room3 ============-->
-        <div class="con">
-            <div class="left1">
-                <img src="image/img7.jpg" alt="">
-
-            </div>
-            <div class="right1">
-                <p class="number">03</p>
-                <h3>Romini Luxe Villa</h3>
-                <p>A spacious 3-bedroom villa with a private pool, beautiful garden, and comfortable spaces for
-                    families.</p>
-
-                <div class="price">₹22,000 / Night</div>
-                <a href="#booking" class="room-btn">
-                    Explore Room
-                </a>
+                    <div class="price">₹22,000 / Night</div>
+                    <a href="#booking" class="room-btn">
+                        Explore Room
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -191,6 +230,8 @@
         <h2>“Stay, Relax and Enjoy.”</h2>
         <p class="small" style="margin-top: 2%;">ROMINI LUXE | GOA</p>
     </section>
+
+
     <!-- ===============gallery==================  -->
     <section id="gallery" class="gallery">
         <div class="gallery2">
@@ -200,12 +241,54 @@
 
             <h2>Our Villa & Views</h2>
         </div>
-        <div class="gallery-img">
-            <img class="large" src="image/img6.avif" alt="villas">
-            <img src="image/img2.jpg" alt="villas">
-            <img src="image/img3.jpg" alt="villas">
-            <img src="image/img4.jpg" alt="villas">
-            <img src="image/img5.jpg" alt="villas">
+
+        <div class="gallery-grid">
+            <div class="gallery-card gallery-large">
+                <img class="gallery-image" src="image/img6.avif" alt="villas"
+                    data-caption="Villa Panoramic Pool & Sunset View">
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+            </div>
+
+
+            <div class="gallery-card">
+                <img class="gallery-image" src="image/img2.jpg" alt="villas"
+                    data-caption="Villa Architecture & Courtyard">
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+            </div>
+
+
+            <div class="gallery-card">
+                <img class="gallery-image" src="image/img3.jpg" alt="villas" data-caption="Private Pool Lounge Deck">
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+            </div>
+
+
+            <div class="gallery-card">
+                <img class="gallery-image" src="image/img4.jpg" alt="villas" data-caption="Lush Tropical Garden Area">
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img class="gallery-image" src="image/img5.jpg" alt="villas" data-caption="Luxury Master Bedroom Space">
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+            </div>
+
+
         </div>
     </section>
 
@@ -217,71 +300,42 @@
         </p>
     </section>
 
-
-    <!-- ========== booking ===========-->
-    <section class="booking" id="booking">
-        <div class="small">
-            PLAN YOUR STAY
-        </div>
-        <h2>Enjoy Your Stay</h2>
-        <form class="booking1">
-            <div class="booking-btn">
-                <label> Check In</label>
-                <input type="date" id="checkin">
-            </div>
-
-            <div class="booking-btn">
-                <label> Check Out</label>
-                <input type="date" id="checkout">
-            </div>
-            <div class="booking-btn">
-
-                <label>Guests</label>
-                <select id="guests">
-                    <option>2 Guests</option>
-                    <option>3 Guests</option>
-                    <option>4 Guests</option>
-                    <option>5 Guests</option>
-
-                </select>
-            </div>
-
-            <div class="booking-btn">
-                <label>Room</label>
-                <select id="rooms">
-                    <option>Garden Room</option>
-                    <option>Pool Suite</option>
-                    <option>Private Villa</option>
-                </select>
-
-            </div>
-            <button type="submit" class="booking-submit">
-                Check Availability
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-        </form>
-
-
     </section>
-    <!-- </section> -->
 
-    <!-- ========== Footerr============== -->
-    <footer>
-        <div class="footer-top">
-            <div>
-                <div class="footer-logo">ROMINI LUXE</div>
-                <p>A luxury 3-bedroom private villa in Goa.</p>
+    <!-- ========== Footer============== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Villa Mia Goa</h3>
+                <p>Experience luxury, comfort, and unforgettable memories in the heart of Goa with our exclusive
+                    boutique villas.</p>
             </div>
-            <div>
-                <p>Assagao, Goa, India</p>
-                <p>+91 93160 09175</p>
-                <p>mansimakawana67@gmail.com</p>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#story">About Villa</a></li>
+                    <li><a href="#room">Rooms</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#goa">Goa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>📍 Assagao, Goa, India</p>
+                <p>📞 +91 9316009175</p>
+                <p>✉️ mansimakawana67@gmail.com</p>
             </div>
         </div>
+
         <div class="footer-bottom">
-            © 2026 Romini Luxe. All Rights Reserved.
+            <p>&copy; 2026 Villa Mia Goa. All Rights Reserved.</p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 
