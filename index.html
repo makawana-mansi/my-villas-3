@@ -1,25 +1,3 @@
-<?php
-
-$con=mysqli_connect("localhost","root","","bookings_1") or die("Error");
-
-    if(isset($_POST['book'])){
-    $checkin = $_POST['checkin'];
-    $checkout = $_POST['checkout'];
-    $guests = $_POST['guests'];
-    $room = $_POST['room'];
-    
-
-
-    $qry="INSERT INTO `villas-2` (`checkin`, `checkout`, `guests`, `room`) VALUES ('$checkin', '$checkout', '$guests', '$room');";
-    $sql=mysqli_query($con,$qry);
-    if($sql){
-             header("Location: index.php?success=1");
-        exit();
-    } else {
-        echo "Booking Failed";
-    }
-    }
-?>
 <html lang="en">
 
 <head>
@@ -56,44 +34,44 @@ $con=mysqli_connect("localhost","root","","bookings_1") or die("Error");
 
         <div class="left">
             <div class="small">
-                WELCOME TO OUR VILLA
+                WELCOME TO ROMINI LUXE
             </div>
             <h1>Romini Luxe <span>Villa</span></h1>
             <p> A stunning 3-bedroom retreat in the heart of Assagao with an expansive private pool
                 and beautiful interiors, blending ultimate luxury and comfort. </p>
 
-            <form class="booking1" method="POST">
+            <form class="booking1">
                 <div class="booking-btn">
                     <label> Check In</label>
-                    <input type="date" name="checkin" id="checkin">
+                    <input type="date" name="checkin">
                 </div>
 
                 <div class="booking-btn">
                     <label> Check Out</label>
-                    <input type="date" name="checkout" id="checkout">
+                    <input type="date" name="checkout">
                 </div>
                 <div class="booking-btn">
 
                     <label>Guests</label>
-                    <select  name="guests" id="guests">
-                          <option value="2">2 Guests</option>
-                           <option value="3">3 Guests</option>
-                           <option value="4">4 Guests</option>
-                           <option value="5">5 Guests</option>
+                    <select name="guests" id="guests">
+                        <option>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4 Guests</option>
+                        <option>5 Guests</option>
 
                     </select>
                 </div>
 
                 <div class="booking-btn">
                     <label>Room</label>
-                    <select  name="room" id="rooms">
+                    <select id="rooms">
                         <option>Garden Room</option>
                         <option>Pool Suite</option>
                         <option>Private Villa</option>
                     </select>
 
                 </div>
-                <button type="submit" name="book" class="booking-submit">
+                <button type="submit" class="booking-submit">
                     Check Availability
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -116,7 +94,7 @@ $con=mysqli_connect("localhost","root","","bookings_1") or die("Error");
                 THE VILLA
             </div>
 
-            <h2>A Luxury Private Escape</h2>
+            <h2>Your Stay at Romini Luxe</h2>
             <p class="p1"> Romini Luxe is a beautiful 3-bedroom villa in Assagao,
                 perfect for relaxing with family and friends.</p>
 
@@ -152,7 +130,7 @@ $con=mysqli_connect("localhost","root","","bookings_1") or die("Error");
         <div class="small" style="margin-top: 5%;">
             THE EXPERIENCE
         </div>
-        <h2>Relax. Enjoy. Come Again</h2>
+        <h2>Everything You Need for a Comfortable Stay</h2>
         <div class="grid-btn">
             <div class="first">
                 <p class="number">01</p>
@@ -201,7 +179,7 @@ $con=mysqli_connect("localhost","root","","bookings_1") or die("Error");
                 <div class="right1">
                     <p class="number_1">01</p>
                     <h3>The Garden Room</h3>
-                    <p>A beautiful bedroom with warm white colors, opening directly to the poolside lounge.</p>
+                    <p>A bright and comfortable room beside the poolside lounge.</p>
                     <div class="price">₹12,500 / Night</div>
                     <a href="#booking" class="room-btn">
                         Explore Room
@@ -317,19 +295,17 @@ $con=mysqli_connect("localhost","root","","bookings_1") or die("Error");
     <section class="goa" id="goa">
         <div class="small">ENJOY GOA</div>
         <h2>Discover Beautiful Goa</h2>
-        <p>Explore peaceful villages, local markets, cozy cafes, beautiful places, and enjoy the simple Goan lifestyle.
-        </p>
+        <p>Explore Assagao, nearby beaches, cafés, markets, and local spots.</p>
     </section>
 
-    </section>
+
 
     <!-- ========== Footer============== -->
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-col">
                 <h3>Villa Mia Goa</h3>
-                <p>Experience luxury, comfort, and unforgettable memories in the heart of Goa with our exclusive
-                    boutique villas.</p>
+                <p></p>
             </div>
 
             <div class="footer-col">
