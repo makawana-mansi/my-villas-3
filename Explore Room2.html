@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Explore Room1</title>
     <style>
-       
-
         .back {
 
             color: var(--color2);
@@ -177,10 +175,184 @@
             background-color: var(--color27);
             box-shadow: 0 9px 11px rgba(0, 0, 0, 0.23);
             transition: 0.3s ease;
+            text-align: center;
         }
 
         .book a:hover {
             transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+
+            .back {
+                margin: 18px 20px 0 20px;
+                font-size: 15px;
+                padding: 7px 12px;
+            }
+
+
+            .rooms-btn {
+                padding: 35px 5%;
+            }
+
+            .rooms-btn h3 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            .gallery-grid-btn {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 180px 140px 140px;
+                gap: 8px;
+            }
+
+            .gallery-large {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+
+            .gallery-card-btn {
+                border-radius: 8px;
+            }
+
+            .gallery-card-btn img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            .room1 {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .details {
+                width: 100%;
+                padding: 30px 5%;
+                box-sizing: border-box;
+            }
+
+            .details h2 {
+                font-size: 27px;
+                line-height: 1.3;
+                margin-bottom: 12px;
+            }
+
+            .details p {
+                width: 100%;
+                font-size: 15px;
+                line-height: 1.7;
+                margin-bottom: 25px;
+            }
+
+            .details h3 {
+                font-size: 19px;
+                margin-bottom: 12px;
+            }
+
+            .details ul {
+                width: 100%;
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-top: 15px;
+                margin-bottom: 25px;
+            }
+
+            .details li {
+                padding: 14px 16px;
+                min-height: 52px;
+                font-size: 15px;
+                border-radius: 12px;
+            }
+
+            .book {
+                width: 100%;
+                padding: 0 5% 35px;
+                box-sizing: border-box;
+            }
+
+            .book div {
+                font-size: 22px;
+                margin-bottom: 18px;
+            }
+
+            .book div span {
+                font-size: 14px;
+            }
+
+            .book a {
+                display: block;
+                width: 100%;
+                padding: 13px 0;
+                box-sizing: border-box;
+                font-size: 16px;
+                border-radius: 12px;
+            }
+
+            .site-footer {
+                text-align: center;
+            }
+
+            .footer-container {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-col {
+                width: 100%;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .back {
+                margin: 15px 15px 0 15px;
+            }
+
+            .rooms-btn {
+                padding: 28px 4%;
+            }
+
+            .rooms-btn h3 {
+                font-size: 25px;
+            }
+
+            .gallery-grid-btn {
+                grid-template-rows: 170px 125px 125px;
+                gap: 7px;
+            }
+
+            .details {
+                padding: 25px 5%;
+            }
+
+            .details h2 {
+                font-size: 24px;
+            }
+
+            .details p {
+                font-size: 14px;
+            }
+
+            .details li {
+                font-size: 14px;
+                padding: 13px 14px;
+            }
+
+            .book {
+                padding: 0 5% 30px;
+            }
+
+            .book div {
+                font-size: 21px;
+            }
+
         }
     </style>
 </head>
