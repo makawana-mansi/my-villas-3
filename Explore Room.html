@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Room Details - Romini Luxe Villa</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #12332f;
+            color: #12332f;
+        }
+
+        .room-details {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .room-card {
+            background: #fff;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        .room-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        .room-content {
+            padding: 35px;
+        }
+
+        .room-content h1 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .room-description {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #555;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .amenities {
+            margin: 25px 0;
+        }
+
+        .amenities h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .amenities-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .amenities-list span {
+            background: #edf4f2;
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            text-decoration: none;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .book-btn {
+            background: #12332f;
+            color: white;
+        }
+
+        .inquiry-btn {
+            background: white;
+            color: #12332f;
+            border: 1px solid #12332f;
+        }
+
+        /* Forms */
+
+        .form-section {
+            display: none;
+            background: #fff;
+            max-width: 800px;
+            margin: 30px auto 60px;
+            padding: 35px;
+            border-radius: 20px;
+        }
+
+        .form-section h2 {
+            margin-bottom: 25px;
+            font-family: Georgia, serif;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #12332f;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .room-image {
+                height: 280px;
+            }
+
+            .room-content {
+                padding: 25px;
+            }
+
+            .room-content h1 {
+                font-size: 32px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="room-details">
+
+        <div class="room-card">
+
+            <img id="roomImage" class="room-image" src="" alt="Room">
+
+            <div class="room-content">
+
+                <h1 id="roomName"></h1>
+
+                <p id="roomDescription" class="room-description"></p>
+
+                <div id="roomPrice" class="price"></div>
+
+                <div class="amenities">
+                    <h2>Amenities</h2>
+
+                    <div id="amenitiesList" class="amenities-list"></div>
+                </div>
+
+                <div class="buttons">
+                    <button class="btn book-btn" onclick="showBooking()">
+                        Book Now
+                    </button>
+
+                    <button class="btn inquiry-btn" onclick="showInquiry()">
+                        Send Inquiry
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Booking Form -->
+
+    <section id="bookingSection" class="form-section">
+
+        <h2>Book Your Stay</h2>
+
+        <form action="booking.php" method="POST">
+
+            <input type="hidden" name="room" id="bookingRoom">
+
+            <div class="form-group">
+                <label>Check-in</label>
+                <input type="date" name="checkin" required>
+            </div>
+
+            <div class="form-group">
+                <label>Check-out</label>
+                <input type="date" name="checkout" required>
+            </div>
+
+            <div class="form-group">
+                <label>Guests</label>
+                <select name="guests" required>
+                    <option value="">Select Guests</option>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+                    <option value="6">6 Guests</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" name="phone" required>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Confirm Booking
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Inquiry Form -->
+
+    <section id="inquirySection" class="form-section">
+
+        <h2>Send an Inquiry</h2>
+
+        <form action="inquiry.php" method="POST">
+
+            <input type="hidden" name="room" id="inquiryRoom">
+
+            <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea name="message" placeholder="Write your inquiry..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Send Inquiry
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <script>
+
+        const rooms = {
+
+            garden: {
+                name: "The Garden Room",
+                image: "images/garden-room.jpg",
+                description: "A bright and comfortable room beside the poolside lounge. Perfect for a relaxing stay surrounded by greenery.",
+                price: "₹12,500 / Night",
+                amenities: [
+                    "King Bed",
+                    "Private Bathroom",
+                    "Wi-Fi",
+                    "Air Conditioning",
+                    "Pool Access"
+                ]
+            },
+
+            pool: {
+                name: "Private Pool & Garden",
+                image: "images/private-pool.jpg",
+                description: "Enjoy an expansive 22 ft x 12 ft private pool surrounded by a lush green garden and a cozy patio lounge area.",
+                price: "₹16,500 / Night",
+                amenities: [
+                    "Private Pool",
+                    "Garden",
+                    "Wi-Fi",
+                    "Air Conditioning",
+                    "Patio Lounge"
+                ]
+            },
+
+            villa: {
+                name: "Romini Luxe Villa",
+                image: "images/villa.jpg",
+                description: "A spacious 3-bedroom villa with a private pool, beautiful garden, and comfortable spaces for families.",
+                price: "₹22,000 / Night",
+                amenities: [
+                    "3 Bedrooms",
+                    "Private Pool",
+                    "Garden",
+                    "Wi-Fi",
+                    "Air Conditioning",
+                    "Family Friendly"
+                ]
+            }
+
+        };
+
+
+        const params = new URLSearchParams(window.location.search);
+
+        const roomId = params.get("room");
+
+        const room = rooms[roomId] || rooms.garden;
+
+
+        document.getElementById("roomName").textContent = room.name;
+
+        document.getElementById("roomImage").src = room.image;
+
+        document.getElementById("roomImage").alt = room.name;
+
+        document.getElementById("roomDescription").textContent =
+            room.description;
+
+        document.getElementById("roomPrice").textContent =
+            room.price;
+
+
+        const amenitiesList =
+            document.getElementById("amenitiesList");
+
+        room.amenities.forEach(function (amenity) {
+
+            const span = document.createElement("span");
+
+            span.textContent = amenity;
+
+            amenitiesList.appendChild(span);
+
+        });
+
+
+        document.getElementById("bookingRoom").value =
+            room.name;
+
+        document.getElementById("inquiryRoom").value =
+            room.name;
+
+
+        function showBooking() {
+
+            document.getElementById("bookingSection").style.display = "block";
+
+            document.getElementById("inquirySection").style.display = "none";
+
+            document.getElementById("bookingSection")
+                .scrollIntoView({ behavior: "smooth" });
+
+        }
+
+
+        function showInquiry() {
+
+            document.getElementById("inquirySection").style.display = "block";
+
+            document.getElementById("bookingSection").style.display = "none";
+
+            document.getElementById("inquirySection")
+                .scrollIntoView({ behavior: "smooth" });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

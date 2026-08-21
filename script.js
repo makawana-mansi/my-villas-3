@@ -1,49 +1,36 @@
-const bookingForm = document.querySelector(".booking1");
+const bookingForm = document.querySelector("form.booking1, form.booking-btn");
+
 if (bookingForm) {
     bookingForm.addEventListener("submit", function (e) {
         e.preventDefault();
+        let checkin = document.getElementById("checkin")?.value;
+        let checkout = document.getElementById("checkout")?.value;
+        let guests = document.getElementById("guests")?.value;
+        let room = document.getElementById("rooms")?.value;
 
-        let checkin = document.getElementById("checkin").value;
-        let checkout = document.getElementById("checkout").value;
-        let guests = document.getElementById("guests").value;
-        let room = document.getElementById("rooms").value;
+        let name = document.getElementById("name")?.value || "";
+        let phone = document.getElementById("phone")?.value || "";
+        let mail = document.getElementById("mail")?.value || "";
+        let request = document.getElementById("request")?.value || "";
 
         if (!checkin || !checkout) {
-            alert("lease select check-in and check-out dates.");
+            alert("Please select check-in and check-out dates.");
             return;
         }
 
-        // Database ma data save karva
-        let formData = new FormData();
+        let bookingWhatsAppMessage = `🏨 New Villa Booking Request
+👤 Name: ${name}
+📞 Phone: ${phone}
+📧 Email: ${mail}
 
-        formData.append("checkin", checkin);
-        formData.append("checkout", checkout);
-        formData.append("guests", guests);
-        formData.append("room", room);
-        formData.append("book", "1");
+📅 Check-in Date: ${checkin}
+📅 Check-out Date: ${checkout}
+👥 Guests: ${guests}
+🏡 Room: ${room}`;
 
-        fetch("index.php", {
-            method: "POST",
-            body: formData
-        })
+        let bookingWhatsAppURL =
+            `https://wa.me/919316009175?text=${encodeURIComponent(bookingWhatsAppMessage)}`;
 
-            .then(Response => Response.text())
-            .then(data => {
-                let bookingWhatsAppMessage = `🏨 New Villa Booking Request
-                📅 Check-in Date: ${checkin}
-                📅 Check-out Date: ${checkout}
-                👥 Guests: ${guests}
-                🏡 Room: ${room}`;
-
-
-
-                let bookingWhatsAppURL = `https://wa.me/919316009175?text=${encodeURIComponent(bookingWhatsAppMessage)}`;
-
-                window.open(bookingWhatsAppURL, "_blank");
-            })
-            .catch(error => {
-                console.log(error);
-                alert("Booking failed!");
-            });
+        window.open(bookingWhatsAppURL, "_blank");
     });
 }

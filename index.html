@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Romini Luxe Villa</title>
 </head>
@@ -33,7 +34,7 @@
     <section id="home" class="hero">
 
         <div class="left">
-            <div class="small">
+            <div class="small" style="color: var(--color8);">
                 WELCOME TO ROMINI LUXE
             </div>
             <h1>Romini Luxe <span>Villa</span></h1>
@@ -43,12 +44,12 @@
             <form class="booking1">
                 <div class="booking-btn">
                     <label> Check In</label>
-                    <input type="date" name="checkin">
+                    <input type="date" id="checkin" name="checkin">
                 </div>
 
                 <div class="booking-btn">
                     <label> Check Out</label>
-                    <input type="date" name="checkout">
+                    <input type="date" id="checkout" name="checkout">
                 </div>
                 <div class="booking-btn">
 
@@ -127,37 +128,44 @@
 
     <!--================== expe... =================== -->
     <section id="experience" class="experience">
-        <div class="small" style="margin-top: 5%;">
+        <div class="small">
             THE EXPERIENCE
         </div>
         <h2>Everything You Need for a Comfortable Stay</h2>
         <div class="grid-btn">
             <div class="first">
-                <p class="number">01</p>
-                <h3>Beautiful Garden</h3>
+                <div class="mix-btn">
+                    <p class="number">01</p>
+                    <h3>Beautiful Garden</h3>
+                </div>
                 <p>Wake up to a beautiful garden and fresh morning air.</p>
 
             </div>
 
             <div class="first">
-                <p class="number">02</p>
-                <h3>Private Pool</h3>
+                <div class="mix-btn">
+                    <p class="number">02</p>
+                    <h3>Private Pool</h3>
+                </div>
                 <p>Enjoy your own private swimming pool anytime you want.</p>
 
             </div>
 
             <div class="first">
-                <p class="number">03</p>
-                <h3>Best Location</h3>
+                <div class="mix-btn">
+                    <p class="number">03</p>
+                    <h3>Best Location</h3>
+                </div>
                 <p>Stay near all the famous cafes and top spots in Goa.</p>
 
             </div>
 
 
             <div class="first">
-
-                <p class="number">04</p>
-                <h3>Perfect Stay</h3>
+                <div class="mix-btn">
+                    <p class="number">04</p>
+                    <h3>Perfect Stay</h3>
+                </div>
                 <p>A great place to relax with your family and friends.</p>
             </div>
         </div>
@@ -166,10 +174,10 @@
     <!-- ========= Room1 ============-->
     <section id="room" class="rooms">
 
-        <div class="small">
+        <div class="small" style="font-size: 26px; color: var(--color6); ">
             Your Stay
         </div>
-        <h1>Rooms & Spaces</h1>
+        <h1>The Rooms</h1>
         <div class="room-grid-container">
             <div class="con">
                 <div class="left1">
@@ -177,11 +185,12 @@
 
                 </div>
                 <div class="right1">
-                    <p class="number_1">01</p>
+
                     <h3>The Garden Room</h3>
-                    <p>A bright and comfortable room beside the poolside lounge.</p>
+                    <p>A bright and comfortable room beside the poolside lounge, with cozy interiors and easy access to
+                        the lush garden.</p>
                     <div class="price">₹12,500 / Night</div>
-                    <a href="#booking" class="room-btn">
+                    <a href="Explore Room1.html" class="room-btn">
                         Explore Room
                     </a>
                 </div>
@@ -194,12 +203,12 @@
 
                 </div>
                 <div class="right1">
-                    <p class="number_1">02</p>
+
                     <h3>Private Pool & Garden</h3>
                     <p>Enjoy an expansive 22 ft x 12 ft private pool surrounded by a lush green garden and a cozy patio
                         lounge area.</p>
                     <div class="price">₹16,500 / Night</div>
-                    <a href="#booking" class="room-btn">
+                    <a href="Explore Room2.html" class="room-btn">
                         Explore Room
                     </a>
                 </div>
@@ -212,13 +221,13 @@
 
                 </div>
                 <div class="right1">
-                    <p class="number_1">03</p>
+
                     <h3>Romini Luxe Villa</h3>
                     <p>A spacious 3-bedroom villa with a private pool, beautiful garden, and comfortable spaces for
                         families.</p>
 
                     <div class="price">₹22,000 / Night</div>
-                    <a href="#booking" class="room-btn">
+                    <a href="Explore Room3.html" class="room-btn">
                         Explore Room
                     </a>
                 </div>
@@ -227,7 +236,11 @@
     </section>
     <section class="line">
         <h2>“Stay, Relax and Enjoy.”</h2>
-        <p class="small" style="margin-top: 2%;">ROMINI LUXE | GOA</p>
+        <p class="par" style="margin-top: 2%; color: var(--color3); line-height: 1.5; font-size: 18px;">Enjoy peaceful
+            mornings,
+            beautiful views, relaxing
+            evenings, and
+            memorable moments with your loved ones.</p>
     </section>
 
 
@@ -238,7 +251,7 @@
                 A LOOK AT ROMINI LUXE
             </div>
 
-            <h2>Our Villa & Views</h2>
+            <h2>The Villa</h2>
         </div>
 
         <div class="gallery-grid">
@@ -291,21 +304,23 @@
         </div>
     </section>
 
-    <!-- =========== goa ========== -->
-    <section class="goa" id="goa">
-        <div class="small">ENJOY GOA</div>
-        <h2>Discover Beautiful Goa</h2>
-        <p>Explore Assagao, nearby beaches, cafés, markets, and local spots.</p>
-    </section>
-
-
 
     <!-- ========== Footer============== -->
     <footer class="site-footer">
         <div class="footer-container">
+
             <div class="footer-col">
-                <h3>Villa Mia Goa</h3>
-                <p></p>
+                <img src="image/logo.png" alt="" class="lo">
+                <!-- <h3>Villa Mia Goa</h3> -->
+                <p style="padding: 1% 0 0 10%; line-height:1.65; font-size: 16px; width: 92%; text-align: start;">
+                    Private villa stays in Goa with beautiful spaces, private pools, and a peaceful place to relax with
+                    family and friends.</p>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" style="padding: 10px 13px;"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
             </div>
 
             <div class="footer-col">
@@ -321,10 +336,12 @@
             </div>
 
             <div class="footer-col">
-                <h4>Contact Us</h4>
-                <p>📍 Goa, India</p>
-                <p>📞 +91 9316009175</p>
-                <p>✉️ mansimakawana67@gmail.com</p>
+                <h4>Contact</h4>
+
+                <p style="padding-top: 13px;"> +91 9316009175</p>
+                <p> mansimakawana67@gmail.com</p>
+                <p> Goa, India</p>
+                <p>Mon — Sun · 24/7 Support</p>
             </div>
         </div>
 

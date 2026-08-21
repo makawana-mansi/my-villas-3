@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Explore Room1</title>
+    <style>
+        .back {
+
+            color: var(--color2);
+            font-weight: bold;
+            margin: 0px 25px;
+            font-size: 17px;
+            display: inline-flex;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 100px;
+            border: 1px solid var(--color1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+            margin: 27px 35px 0 35px;
+
+        }
+
+        .back:hover {
+            transform: translateY(-4px);
+        }
+
+        .rooms-btn {
+            background-color: var(--color6);
+            padding: 60px 7%;
+        }
+
+        .rooms-btn h3 {
+            font-family: Georgia, serif;
+            font-size: 40px;
+            color: var(--color24);
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid-btn {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            grid-template-rows: 230px 230px;
+            gap: 10px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-card-btn {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(22, 48, 46, 0.08);
+        }
+
+        .gallery-card-btn:hover .gallery-image {
+            transform: scale(1.07);
+        }
+
+        .gallery-large {
+            grid-row: span 2;
+        }
+
+        .gallery-overlay-btn {
+            position: absolute;
+            inset: 0;
+            background: rgba(22, 48, 46, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+
+        .gallery-card-btn:hover .gallery-overlay-btn {
+            opacity: 1;
+        }
+
+        .gallery-overlay-btn i {
+            color: var(--color6);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 12px;
+            border-radius: 50%;
+        }
+
+        .room1 {
+            width: 100%;
+            display: flex;
+
+            background-color: var(--color6);
+        }
+
+        .details {
+            padding: 30px 7%;
+
+            width: 914px;
+
+        }
+
+        .details h2 {
+            font-family: Georgia, serif;
+            font-size: 32px;
+            color: var(--color24);
+            margin-bottom: 10px;
+        }
+
+        .details p {
+            color: var(--color5);
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            width: 66%;
+        }
+
+
+        .book div {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color24);
+            margin-bottom: 20px
+        }
+
+        span {
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--color5);
+
+        }
+
+        .details h3 {
+            font-size: 20px;
+            color: var(--color24);
+            margin-bottom: 15px;
+        }
+
+        .details ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            margin-bottom: 34px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            width: 87%;
+        }
+
+        .details li {
+            background: #f7f7fb;
+            padding: 18px 20px;
+            border-radius: 14px;
+            font-size: 17px;
+            color: #333;
+
+            display: flex;
+            align-items: center;
+            min-height: 58px;
+            box-sizing: border-box;
+        }
+
+        .book a {
+            display: inline-block;
+            padding: 11px 200px;
+            border-radius: 15px;
+            color: var(--color6);
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            font-weight: var(--Weight2);
+            background-color: var(--color27);
+            box-shadow: 0 9px 11px rgba(0, 0, 0, 0.23);
+            transition: 0.3s ease;
+        }
+
+        .book a:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <!-- ==========Navbar=========== -->
+        <div class="logo">
+            <img src="image/logo.png" alt="">
+        </div>
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#story">About Villa</a></li>
+            <li><a href="#room">Rooms</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#goa">Goa</a></li>
+
+        </ul>
+
+        <a href="#booking" class="book-btn">
+            Book Stay
+        </a>
+
+    </nav>
+
+    <div style="background: var(--color6);">
+        <a href="index.html" class="back">←
+            Back</a>
+    </div>
+
+    <section id="room" class="rooms-btn">
+        <h3>The Garden Room</h3>
+
+        <div class="gallery-grid-btn">
+            <div class="gallery-card-btn gallery-large">
+                <img class="gallery-image" src="image/img6.avif" alt="villas"
+                    data-caption="Villa Panoramic Pool & Sunset View">
+
+                <div class="gallery-overlay-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+            </div>
+
+
+            <div class="gallery-card-btn">
+                <img class="gallery-image" src="image/img1.jpg" alt="villas"
+                    data-caption="Villa Architecture & Courtyard">
+
+                <div class="gallery-overlay-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+            </div>
+
+
+            <div class="gallery-card-btn">
+                <img class="gallery-image" src="image/img9.jpg" alt="villas" data-caption="Private Pool Lounge Deck">
+
+                <div class="gallery-overlay-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+            </div>
+
+
+            <div class="gallery-card-btn">
+                <img class="gallery-image" src="image/img8.jpg" alt="villas" data-caption="Lush Tropical Garden Area">
+
+                <div class="gallery-overlay-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+            </div>
+
+            <div class="gallery-card-btn">
+                <img class="gallery-image" src="image/img10.jpg" alt="villas"
+                    data-caption="Luxury Master Bedroom Space">
+
+                <div class="gallery-overlay-btn">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="room1">
+        <div class="details">
+            <h2>The Garden Room at Romini Luxe</h2>
+            <p>A bright and comfortable room near the pool, with cozy interiors, air conditioning, and easy access to
+                the
+                garden. A peaceful space for couples or small families to relax and enjoy their stay.</p>
+
+
+            <h3>Amenities</h3>
+            <ul>
+                <li>🏊 Poolside Lounge Access</li>
+                <li>📶 High-Speed Wi-Fi</li>
+                <li>❄️ Air Conditioning</li>
+                <li>🌿 Garden View</li>
+            </ul>
+        </div>
+        <div class="book">
+            <div>
+                ₹12,500 <span>/ Night</span>
+            </div>
+            <a href="booking.html?room=garden">Book Now</a>
+        </div>
+    </section>
+
+
+    <!-- ========== Footer============== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <img src="image/logo.png" alt="" class="lo">
+                <!-- <h3>Villa Mia Goa</h3> -->
+                <p style="padding: 1% 0 0 10%; line-height:1.65; font-size: 16px; width: 92%; text-align: start;">
+                    Private villa stays in Goa with beautiful spaces, private pools, and a peaceful place to relax with
+                    family and friends.</p>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" style="padding: 10px 13px;"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#story">About Villa</a></li>
+                    <li><a href="#room">Rooms</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#goa">Goa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+
+                <p style="padding-top: 13px;"> +91 9316009175</p>
+                <p> mansimakawana67@gmail.com</p>
+                <p> Goa, India</p>
+                <p>Mon — Sun · 24/7 Support</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Villa Mia Goa. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
