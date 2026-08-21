@@ -825,7 +825,7 @@
    }
 
    .icon a:hover {
-       color: var(--color32);
+       color: var(--color11);
 
    }
 
@@ -836,7 +836,8 @@
        list-style: none;
        padding: 13px 0;
        margin: 0;
-       align-items: center;
+       align-items: flex-start;
+       margin: 0 41%;
 
    }
 
@@ -848,7 +849,7 @@
    }
 
    .footer-col ul li a:hover {
-       color: var(--color26);
+       color: var(--color11);
    }
 
    .footer-bottom {
@@ -1139,4 +1140,4 @@
 
    }
 
-   /* ========================== */
+  
