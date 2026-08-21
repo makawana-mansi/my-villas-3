@@ -713,26 +713,6 @@
        opacity: 1;
    }
 
-   .gallery-overlay i {
-       color: var(--color6);
-       font-size: 20px;
-
-       background: rgba(0, 0, 0, 0.4);
-
-       padding: 12px;
-
-       border-radius: 50%;
-
-       transform: scale(0.6);
-
-       transition:
-           transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
-   }
-
-   .gallery-card:hover .gallery-overlay i {
-       transform: scale(1);
-   }
-
 
    /* ======================================================= */
 
@@ -1139,5 +1119,3 @@
        }
 
    }
-
-  
