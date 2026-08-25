@@ -34,3 +34,28 @@ if (bookingForm) {
         window.open(bookingWhatsAppURL, "_blank");
     });
 }
+
+const cards = document.querySelectorAll(".gallery-card");
+const imageP = document.getElementById("imageP");
+const popupImage = document.getElementById("popupImage");
+const closeBtn = document.querySelector("#imageP span");
+
+cards.forEach(function (card) {
+    card.addEventListener("click", function () {
+        const image = card.querySelector(".gallery-image");
+
+        popupImage.src = image.src;
+        popupImage.alt = image.alt;
+        imageP.style.display = "flex";
+    });
+});
+
+closeBtn.addEventListener("click", function () {
+    imageP.style.display = "none";
+});
+
+imageP.addEventListener("click", function (event) {
+    if (event.target === imageP) {
+        imageP.style.display = "none";
+    }
+});
