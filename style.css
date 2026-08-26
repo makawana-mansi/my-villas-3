@@ -312,7 +312,7 @@
    }
 
    .story-text {
-       padding: 60px 18px 60px 58px;
+       padding: 23px 18px 60px 58px;
        display: flex;
        flex-direction: column;
        justify-content: center;
@@ -410,7 +410,7 @@
    /* ================================================== */
    .experience {
        background: var(--color30);
-       padding: 80px 7%;
+       padding: 41px 7%
    }
 
    .experience h2 {
@@ -419,14 +419,16 @@
        font-size: 52px;
        line-height: 1.1;
        font-weight: var(--Weight3);
-       margin: 0 0 70px;
+
+       margin: 0 0 27px;
+
 
    }
 
    .grid-btn {
        display: grid;
        grid-template-columns: repeat(4, 1fr);
-       gap: 24px;
+       gap: 8px;
        border: none;
    }
 
@@ -501,7 +503,7 @@
 
    /* ====================================================================== */
    .rooms {
-       padding: 42px 7%;
+       padding: 21px 7%;
        background: var(--color24);
        color: var(--color6);
    }
@@ -510,7 +512,7 @@
        font-family: Georgia, serif;
        font-size: 50px;
        font-weight: normal;
-       margin: 0px 0 55px;
+       margin: 0px 0 27px;
    }
 
    .room-grid-container {
@@ -556,6 +558,7 @@
    .right1 {
        padding: 25px;
        flex-grow: 1;
+
    }
 
 
@@ -564,9 +567,9 @@
        font-family: Georgia, serif;
        font-size: 25px;
        font-weight: normal;
-       margin-bottom: 15px;
+       margin-bottom: 10px;
        color: var(--color24);
-       min-height: 60px;
+       min-height: auto;
 
    }
 
@@ -575,7 +578,7 @@
        line-height: 1.6;
        /* margin-bottom: 15px; */
        font-size: 14px;
-       min-height: 90px;
+       min-height: auto;
    }
 
    .price {
@@ -1001,7 +1004,7 @@
            display: flex;
            width: 100%;
            gap: 16px;
-           padding: 10px 20px 20px;
+           padding: 0px 20px 20px;
            overflow-x: auto;
        }
 
@@ -1236,34 +1239,6 @@
        .experience h2 {
            font-size: 40px;
        }
-   }
-
-   /* @media (max-width: 1118px) { */
-   /* .room-grid-container .con {
-       position: relative;
-   }
-
-   .room-grid-container .room-btn {
-       position: absolute;
-       left: 25px;
-       bottom: 20px;
-       margin: 0;
-   } */
-   .room-grid-container .right1 {
-       display: flex;
-       flex-direction: column;
-       padding: 25px;
-   }
-
-   .room-grid-container .price {
-       margin-top: 19px;
-       margin-bottom: 32px;
-   }
-
-   .room-grid-container .room-btn {
-       position: static;
-       margin: 0;
-       align-self: flex-start;
    }
 
    @media (max-width: 900px) {
